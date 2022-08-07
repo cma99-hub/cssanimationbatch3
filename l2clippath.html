@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clip Path</title>
+
+        <style type="text/css">
+
+            .shape{
+                width: 500px;
+                height: 300px;
+
+                background:red;
+            }
+
+            #circle{
+                /* clip-path: circle(); */
+
+                /* clip-path: circle(100px); */
+                /* clip-path: circle(200px); */
+                /* clip-path: circle(250px); */
+
+                /* circle(shape-radius at position) */
+                /* clip-path: circle(200px at center); */       /* shape-radius - center at center => default */
+                /* clip-path: circle(200px at left); */         /* shape-radius - center at left */
+                /* clip-path: circle(200px at right); */        /* shape-radius - center at right */
+                /* clip-path: circle(200px at top); */          /* shape-radius - center at top */
+                /* clip-path: circle(200px at bottom); */       /* shape-radius - center at bottom */
+
+                /* clip-path:circle(100px at 0); */             /* center at 0px from left */
+                /* clip-path: circle(200px at 100px); */        /* center at 100px from left */
+                /* clip-path: circle(200px at 300px); */        /* center at 300px from left */
+                /* clip-path: circle(200px at 500px); */        /* center at 500px from left */
+
+                           /* circle(shape-radius at width height) */
+                /* clip-path: circle(200px at 50px 20px); */
+                /* clip-path: circle(200px at 50px 300px); */
+                /* clip-path: circle(200px at 0px 20px); */
+
+                /* clip-path: circle(10%); */
+                /* clip-path: circle(30%); */
+                /* clip-path: circle(50%); */
+                /* clip-path: circle(100%); */
+
+                clip-path: circle(50% at 50% 20%);
+
+            }
+
+            #polygon{
+                clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 60% 35%, 60% 100%, 40% 100%, 40% 35%, 0% 35% );
+            }
+
+            #ellipse{
+                /* clip-path: ellipse(150px 50px); */
+                /* clip-path: ellipse(150px 100px); */
+                /* clip-path: ellipse(80px 50px); */
+
+                /* clip-path: ellipse(100% 50%); */
+                /* clip-path: ellipse(100% 30%); */
+                /* clip-path: ellipse(50% 30%); */
+                /* clip-path: ellipse(30% 100%); */
+
+                          /* ellipse(shape-radius at position); */
+                /* clip-path:ellipse(150px 50px at center); */
+                /* clip-path:ellipse(150px 50px at left); */
+                /* clip-path:ellipse(150px 50px at right); */
+                /* clip-path:ellipse(150px 50px at top); */
+                /* clip-path:ellipse(150px 50px at bottom); */
+
+                          /* ellipse(shape-radius at width); */
+                /* clip-path:ellipse(30% 100% at 20%); */
+                /* clip-path:ellipse(30% 100% at 50%); */
+                /* clip-path:ellipse(30% 100% at 100%); */
+
+                           /* ellipse(shape-radius at width height); */
+                /* clip-path: ellipse(30% 100% at 20% 20%); */
+                clip-path: ellipse(30% 100% at 50% 10%);
+
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <img src="./img/fav/favicon.jpg" id="circle" class="shape" alt="circle" />
+
+        <hr/>
+
+        <img src="./img/fav/favicon.jpg" id="polygon" class="shape" alt="circle" />
+
+        <hr/>
+
+        <img src="./img/fav/favicon.jpg" id="ellipse" class="shape" alt="circle" />
+    </body>
+</html>

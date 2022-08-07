@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perspective-Origin Home</title>
+
+        <style type="text/css">
+
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container{
+                width: 500px;
+                height: 150px;
+                background: #e5e5e5;
+            }
+
+            .div1{
+                width: 300px;
+                height: 150px;
+                background: #999;
+                border: 1px solid black;
+                box-shadow: -10px 0px 10px grey;
+
+                margin: auto;
+
+                perspective: 1000px;
+                perspective-origin: bottom;
+
+                position: relative;
+            }
+
+            .div2{
+                width: 400px;
+                height: 300px;
+                background: linear-gradient(black 25%,#999);
+                border: 1px solid black;
+                box-shadow: -10px -10px 10px grey;
+
+                transform: rotateX(50deg);
+                transform-origin: bottom;
+
+                position: absolute;
+                left: -50px;
+                top: -250px;
+
+                z-index: 1;
+            }
+
+            .div3{
+                width: 150px;
+                height: 150px;
+                background: transparent;
+
+                margin: auto;
+                box-shadow: -5px 0 20px black;
+
+                perspective: 400px;
+
+                position: relative;
+
+                position: absolute;
+                left: 75px;
+                bottom: 0;
+            }
+
+            .doorleft{
+                width: 75px;
+                height: 100px;
+                background: #fff;
+                border: 2px solid black;
+                /* box-shadow: 5px 0 10px #444; */
+
+                position: absolute;
+                left: -3px;
+                bottom: 0;
+
+                transition: transform 1s;
+                transform-origin: left;
+            }
+
+            .doorleft:hover{
+                transform: rotateY(-60deg);
+            }
+
+            .doorright{
+                width: 75px;
+                height: 100px;
+                background: #fff;
+                border: 2px solid black;
+                box-shadow: 0 5px 20px #444;
+
+                position: absolute;
+                right: -3px;
+                bottom: 0;
+
+                transform: rotateY(60deg);
+                transform-origin: right;
+
+                transition: transform 1s;
+            }
+
+            .doorright:hover{
+                transform: rotateY(0deg);
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <div class="div1">
+                <div class="div2"></div>
+                <div class="div3">
+                    <div class="doorleft"></div>
+                    <div class="doorright"></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
